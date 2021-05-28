@@ -3,9 +3,24 @@ body {
   height: 100%;
   width: 100%; }
 
-.bgHeaderGif {
+.bgHeaderJpg {
   height: 100%;
   background-image: url("../img/headerPicture.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center; }
+  background-position: center;
+  position: relative; }
+
+.homeIntro {
+  position: absolute;
+  top: 40%;
+  width: 100%;
+  text-align: center;
+  color: white; }
+
+ul.navbar-nav {
+  transition: 1s ease-in-out; }
+
+.navPop {
+  background-color: white;
+  background-color: rgba(0, 0, 0, 0.7); }

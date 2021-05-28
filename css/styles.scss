@@ -4,10 +4,28 @@ body {
     width: 100%;
 }
 
-.bgHeaderGif {
+.bgHeaderJpg {
     height: 100%;
     background-image: url("../img/headerPicture.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    position: relative;
+}
+
+.homeIntro {
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+ul.navbar-nav {
+    transition: 1s ease-in-out;
+}
+
+.navPop {
+    background-color:rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.7);
 }
