@@ -1,17 +1,32 @@
 {
   "name": "npm-project",
   "version": "1.0.0",
-  "description": "This is a website for fictional campsites review site Nucamp",
+  "description": "Portfolio Project",
   "main": "index.html",
   "scripts": {
+    "start": "npm run watch:all",
+    "watch:all": "parallelshell \"npm run watch:scss\" \"npm run lite\"",
+    "watch:scss": "onchange \"css/*.scss\" -- npm run scss",
     "lite": "lite-server",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm run lite"
+    "scss": "node-sass -o css/ css/",
+    "build": "npm run clean && npm run imagemin && npm run copyfonts && npm run usemin",
+    "clean": "rimraf dist",
+    "imagemin": "imagemin img/* -o dist/img",
+    "copyfonts": "copyfiles -f node_modules/font-awesome/fonts/* dist/fonts",
+    "usemin": "usemin index.html -d dist --htmlmin -o dist/index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Christopher Crawford",
   "license": "ISC",
   "devDependencies": {
-    "lite-server": "^2.6.1"
+    "copyfiles": "^2.2.0",
+    "imagemin-cli": "^5.1.0",
+    "lite-server": "^2.6.1",
+    "node-sass": "^4.14.1",
+    "onchange": "^7.0.0",
+    "parallelshell": "3.0.1",
+    "rimraf": "^3.0.2",
+    "usemin-cli": "^0.6.0"
   },
   "dependencies": {
     "bootstrap": "^4.5.2",
