@@ -12,6 +12,14 @@ body {
   background-position: center;
   position: relative; }
 
+.bgFooterJpg {
+  height: 100%;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), white), url("../img/Smy82WU-high-quality-background-images.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative; }
+
 .homeIntro {
   position: absolute;
   top: 40%;
@@ -29,17 +37,13 @@ body {
   padding: 2px;
   border: 1px solid; }
 
-.site-section {
-  padding: 5em 0; }
+.sectionPad {
+  padding: 1em; }
 
-.section-heading {
+.sectionHeading {
   margin-bottom: 30px;
-  position: relative;
-  z-index: 10; }
+  position: relative; }
 
-.text-center {
-  text-align: center !important; }
-
-.single-portfolio {
+.projectMb {
   margin-bottom: 50px;
   display: block; }
